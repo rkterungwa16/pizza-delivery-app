@@ -1,10 +1,19 @@
+
 const environments = {}
 
 environments.staging = {
   'httpPort': 3000,
   'httpsPort': 3001,
   'envName': 'staging',
-  'hashingSecret': 'mySecret'
+  'hashingSecret': 'mySecret',
+  'mailgun': {
+    'apiKey': `${process.env.MAILGUN_API_KEY}`,
+    'domainName': `${process.env.MAILGUN_DOMAIN_NAME}`
+  },
+  'stripe': {
+    'token': `${process.env.STRIPE_TOKEN}`,
+    'apiKey': `${process.env.STRIPE_API_KEY}`
+  }
 }
 
 environments.production = {
