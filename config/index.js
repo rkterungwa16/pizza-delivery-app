@@ -7,12 +7,12 @@ environments.staging = {
   'envName': 'staging',
   'hashingSecret': 'mySecret',
   'mailgun': {
-    'apiKey': 'dc907ce2d62fb7922eff442c33128eb9-a3d67641-21784bd5',
-    'domainName': 'sandbox1cca373d00b9498ca464e20244cd5c23.mailgun.org'
+    'apiKey': `${process.env.MAILGUN_API_KEY}`,
+    'domainName': `${process.env.MAILGUN_DOMAIN_NAME}`
   },
   'stripe': {
-    'token': 'tok_mastercard',
-    'apiKey': 'sk_test_GtHfD0ZaRWx8N6loxR2oGKsO'
+    'token': `${process.env.STRIPE_TOKEN}`,
+    'apiKey': `${process.env.STRIPE_API_KEY}`
   }
 }
 
