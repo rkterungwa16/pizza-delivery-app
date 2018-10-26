@@ -1,18 +1,22 @@
 
 const environments = {}
 
+// export MAILGUN_API_KEY=dc907ce2d62fb7922eff442c33128eb9-a3d67641-21784bd5
+// export MAILGUN_DOMAIN_NAME=sandbox1cca373d00b9498ca464e20244cd5c23.mailgun.org
+// export STRIPE_TOKEN=tok_mastercard
+// export STRIPE_API_KEY=sk_test_GtHfD0ZaRWx8N6loxR2oGKsO
 environments.staging = {
   'httpPort': 3000,
   'httpsPort': 3001,
   'envName': 'staging',
   'hashingSecret': 'mySecret',
   'mailgun': {
-    'apiKey': `${process.env.MAILGUN_API_KEY}`,
-    'domainName': `${process.env.MAILGUN_DOMAIN_NAME}`
+    'apiKey': 'dc907ce2d62fb7922eff442c33128eb9-a3d67641-21784bd5',
+    'domainName': 'sandbox1cca373d00b9498ca464e20244cd5c23.mailgun.org'
   },
   'stripe': {
-    'token': `${process.env.STRIPE_TOKEN}`,
-    'apiKey': `${process.env.STRIPE_API_KEY}`
+    'token': 'tok_mastercard',
+    'apiKey': 'sk_test_GtHfD0ZaRWx8N6loxR2oGKsO'
   }
 }
 
